@@ -16,7 +16,7 @@ function getPosts() {
   $.getJSON('/api/posts/', (json) => {
     // console.log(json);
     state.posts = json;
-    console.log(state, 'state');
+    // console.log(state, 'state');
     // createPost(state, header, url, week, description);
     renderPosts(state, $('.tbody'));
   // $('#dialog-form').dialog( 'close' );
@@ -202,7 +202,7 @@ $( '#create-post' ).on( 'click', function() {
 let populateEditDialog = function(state, postId) {
 
   //refactor using the state
-  console.log(state.posts, 'something')
+  // console.log(state.posts, 'something')
   // console.log(state);
   // console.log(postId);// 34567hjkdsf
   // let stateId = state.posts[i].postId
@@ -218,7 +218,7 @@ const cellElems = rowElem.find(editElemIdentifier)
 
 cellElems.each(function(i, cell){
   if (cell.id==='edit-url') {
-    console.log(cell.querySelector('a'))
+    // console.log(cell.querySelector('a'))
     inputElems[i].value = cell.querySelector('a').href;
     //else if the id is for edit-week
   } else {
@@ -239,9 +239,8 @@ $( '.tbody' ).on( 'click', '.edit-button', function() {
   // show the dialog
 
 
-
-  const postId = $(event.currentTarget).children( '.table-row' ).data('post-id');
-  console.log(postId);
+  const postId = $(event.target).closest('.table-row').data('post-id');
+  // console.log($(event.target).closest('.table-row').data('post-id'));
   populateEditDialog(state, postId);
   $('#edit-dialog').dialog( 'open' );
 
@@ -286,7 +285,7 @@ $( '.tbody'  ).on( 'click', '.remove-button' ,function(event){
 //--Document Ready----------------------------------------------------
 
 $(function() {
-  console.log( 'ready!' );
+  // console.log( 'ready!' );
 
   $('#dialog-form').on('submit', function (event) {
     event.preventDefault();
