@@ -1,0 +1,7 @@
+node_modules
+.env
+need.node_modules
+wireframe.png
+boot
+.travis.yml
+need.md

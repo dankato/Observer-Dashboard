@@ -16,6 +16,7 @@ function getPosts() {
   $.getJSON('/api/posts/', (json) => {
     // console.log(json);
     state.posts = json;
+    console.log(state, 'state');
     // createPost(state, header, url, week, description);
     renderPosts(state, $('.tbody'));
   // $('#dialog-form').dialog( 'close' );
@@ -66,7 +67,6 @@ let editPost = function(state, id) {
     description = $('input#edit-description').val();
   const addObj = {id: id, header: header, url: url, week: week, description: description};
 
-// console.log(addObj)
   $.ajax({
     url: '/api/posts/' + id,
     dataType: 'json',
@@ -74,7 +74,7 @@ let editPost = function(state, id) {
     contentType: 'application/json',
     data: JSON.stringify(addObj),
     success: function(data){
-      // console.log('data: ', data);
+      console.log('data: ', data);
       getPosts();
       $( '#edit-dialog' ).dialog( 'close' );
     },
@@ -109,7 +109,6 @@ let createUser = function(state, data) {
 //---template----------------------------------------------------
 
 function postTemplate(state, data){
-  // console.log('data.id: ', data.id);
   return `
       <tr class="table-row" data-post-id="${data.id}">
         <td id="edit-header">${data.header}</td>
@@ -187,7 +186,7 @@ $( '#edit-dialog' ).dialog({
 
 // Open "create new post" dialog
 $( '#create-post' ).on( 'click', function() {
-  $('#dialog-modal').dialog( 'open' );
+ $('#dialog-modal').dialog( 'open' );
 });
 
 //  Create
@@ -203,7 +202,7 @@ $( '#create-post' ).on( 'click', function() {
 let populateEditDialog = function(state, postId) {
 
   //refactor using the state
-  console.log(state.posts)
+  console.log(state.posts, 'something')
   // console.log(state);
   // console.log(postId);// 34567hjkdsf
   // let stateId = state.posts[i].postId
@@ -242,6 +241,7 @@ $( '.tbody' ).on( 'click', '.edit-button', function() {
 
 
   const postId = $(event.currentTarget).children( '.table-row' ).data('post-id');
+  console.log(postId);
   populateEditDialog(state, postId);
   $('#edit-dialog').dialog( 'open' );
 
