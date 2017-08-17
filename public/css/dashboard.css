@@ -1,0 +1,94 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+    padding-top: 3.5rem;
+  }
+  
+  /*
+   * Typography
+   */
+  
+  h1 {
+    margin-bottom: 20px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /*
+   * Sidebar
+   */
+  
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    border-right: 1px solid #eee;
+  }
+  .sidebar-right {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    border-right: 1px solid #eee;
+  }
+  /* Sidebar navigation */
+  .sidebar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .sidebar .nav {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .nav-item {
+    width: 100%;
+  }
+  
+  .sidebar .nav-item + .nav-item {
+    margin-left: 0;
+  }
+  
+  .sidebar .nav-link {
+    border-radius: 0;
+  }
+  
+  /*
+   * Dashboard
+   */
+  
+   /* Placeholders */
+  .placeholders {
+    padding-bottom: 3rem;
+  }
+  
+  .placeholder img {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+
+  label, input { display:block; width: auto; }
+  .ui-button {align-items: right;}
+  .ui-dialog-titlebar {background-color: palevioletred;}
+  div#edit-dialog, div#dialog-modal, .ui-dialog-buttonset {background-color: pink; padding: 25px;}
+  input.text { margin-bottom:12px; width:95%; height: 95%; padding: .4em; }
+  fieldset { padding:0; border:0; margin-top:25px; }
+  h1 { font-size: 1.2em; margin: .6em 0; }
+  div#posts-contain { width: auto; margin: 20px 0; }
+  div#posts-contain table { margin: 1em 0; border-collapse: collapse; width: 100%;}
+  div#posts-contain table td, div#posts-contain table th {border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+  .ui-dialog .ui-state-error { padding: .3em; }
+  .validateTips { border: 1px solid transparent; padding: 0.3em; }

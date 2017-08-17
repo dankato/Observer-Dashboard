@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>super student dashboard 2 alpha ex plus</title>
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark:700" rel="stylesheet">
+  </head>
+<body>
+    <container>
+      <div id="dialog-form" title="Create a new post">
+        <p class="validateTips">Ok buttercup, create an account.</p>
+        <form>
+          <fieldset>
+            <label for="first_name">First Name</label>
+            <input type="text" header="first_name" id="first_name" placeholder="Sally" class="text ui-widget-content ui-corner-all">
+            <label for="last_name">Last Name</label>
+            <input type="text" header="last_name" id="last_name" placeholder="Student" class="text ui-widget-content ui-corner-all">
+            <label for="username">User Name</label>
+            <input type="text" header="username" id="username" placeholder="sstudent" class="text ui-widget-content ui-corner-all">
+            <label for="password">Password</label>
+            <input type="text" header="password" id="password" placeholder="password" type="hidden" class="text ui-widget-content ui-corner-all">
+           
+            <label for="cohort">Cohort</label>
+                <select>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                </select>
+            <br>
+            <!-- Allow form submission with keyboard without duplicating the dialog button -->
+            <!-- <input type="submit" tabindex="-1" style="position:absolute; top:-1000px"> -->
+            <input type="submit">
+          </fieldset>
+        </form>
+      </div>
+    </container>
+    
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="app2.js"></script>
+      </body>
+</html>

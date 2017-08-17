@@ -1,0 +1,37 @@
+{
+  "name": "capstone",
+  "version": "1.0.0",
+  "description": "dash-cap",
+  "main": "config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mscottcam/dash_capstone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mscottcam/dash_capstone/issues"
+  },
+  "homepage": "https://github.com/mscottcam/dash_capstone#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "chai": "^4.1.0",
+    "chai-http": "^3.0.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "faker": "^4.1.0",
+    "mocha": "^3.4.2",
+    "mongoose": "^4.11.3",
+    "morgan": "^1.8.2",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0"
+  },
+  "devDependencies": {}
+}

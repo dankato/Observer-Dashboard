@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../../../favicon.ico"> -->
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="../css/dashboard.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Dashboard</a>
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <!-- <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li> -->
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+          <button id="create-post" class="btn btn-outline-success my-2 my-sm-0" >Create a new post</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Week <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item"><a href="#week-06" class="nav-link"> 06 Node Capstone</a></li>
+            <li class="nav-item"><a href="#week-07" class="nav-link"> 07 React</a></li>
+            <li class="nav-item"><a href="#week-08" class="nav-link"> 08 Redux</a></li>
+            <li class="nav-item"><a href="#week-09" class="nav-link"> 09 Full Stack</a></li>
+            <li class="nav-item"><a href="#week-10" class="nav-link"> 10 Design and Deploy</a></li>
+            <li class="nav-item"><a href="#week-11" class="nav-link"> 11 Data Structures I</a></li>
+            <li class="nav-item"><a href="#week-12" class="nav-link"> 12 Data Structures II</a></li>
+            <li class="nav-item"><a href="#week-13" class="nav-link"> 13 Spaced repetition</a></li>
+            <li class="nav-item"><a href="#week-14" class="nav-link"> 14 Flex Week</a></li>
+            <li class="nav-item"><a href="#week-15" class="nav-link"> 15 Capstone 1</a></li>
+            <li class="nav-item"><a href="#week-16" class="nav-link"> 16 Capstone 2</a></li>
+            <li class="nav-item"><a href="#week-17" class="nav-link"> 17 Capstone 3</a></li>
+            <li class="nav-item"><a href="#week-18" class="nav-link"> 18 Portfilio Week </a></li>
+            <li class="nav-item"><a href="#week-19" class="nav-link"> 19 Career Service</a></li>
+          </ul>
+        </nav>
+
+        <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+
+          <!-- <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar-right">
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Students<span class="sr-only">(current)</span></a>
+              </li>
+              <div class="col-6 col-sm-3 placeholder">
+                <img src="https://avatars0.githubusercontent.com/u/24946995?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+                <h4>Scott Cameron</h4>
+                <div class="text-muted">
+                  <a href="https://thinkful-students.slack.com/messages/@scott_cam/" target="_blank"><i class="fa fa-slack"></i></a>
+                  <a href="https://github.com/mscottcam" target="_blank"><i class="fa fa-github"></i></a>
+                  <a href="mailto:mscottcam@gmail.com"><i class="fa fa-envelope"></i></a>
+                </div>
+              </div>
+            </ul>
+          </nav> -->
+
+       
+              <div id="posts-contain" class= "table-responsive">
+                <table id="posts" class="table table-striped" >
+                  <thead class="thead">
+                <tr>
+                  <th>#</th>
+                  <th>URL</th>
+                  <th>Week</th>
+                  <th>Description</th>
+                  <th>Edit</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+              <tbody class="tbody">
+    
+
+              </tbody>
+            </table>
+          </div>
+
+   <!-- Post Dialog -->
+   <div id="dialog-modal" title="Create a new post">
+    <p class="validateTips">All form fields are required and keep it under 200 characters.</p>
+
+    <form id="dialog-form">
+      <fieldset>
+        <label for="header">Subject</label>
+        <input type="text" header="header" id="header" placeholder="Enter a quick note what this is about." class="text ui-widget-content ui-corner-all">
+        <label for="url">url</label>
+        <input type="text" header="url" id="url" placeholder="http://www.pandaexpress.com" class="text ui-widget-content ui-corner-all">
+        <label  for="week" >Week</label>
+            <select id="week">
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+            </select>
+        <label for="description">Description</label>
+        <input type="description" header="description" id="description" placeholder="Describe in more detail of its importance." class="text ui-widget-content ui-corner-all">
+
+        <!-- Allow form submission with keyboard without duplicating the dialog button -->
+        <button  tabindex="-1" >Submit</button>
+        <!-- style="position:absolute; top:-1000px" -->
+      </fieldset>
+    </form>
+  </div>
+
+  <!-- Edit Dialog -->
+  <div id="edit-dialog" title="Edit post">
+    <p class="validateTips">All form fields are required and keep it under 200 characters.</p>
+
+    <form id="edit-form">
+      <fieldset>
+        <label for="header">Subject</label>
+        <input type="text" name="header" id="edit-header" value="" class="text ui-widget-content ui-corner-all">
+        <label for="url">url</label>
+        <input type="text" name="url" id="edit-url" value="" class="text ui-widget-content ui-corner-all">
+        <label  for="week" >Week</label>
+            <select name="week" id="edit-week">
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+            </select>
+        <label for="description">Description</label>
+        <input type="description" name="description" id="edit-description" value="" class="text ui-widget-content ui-corner-all">
+
+        <!-- Allow form submission with keyboard without duplicating the dialog button -->
+        <button  tabindex="-1" >Submit</button>
+        <!-- style="position:absolute; top:-1000px" -->
+      </fieldset>
+    </form>
+  </div>
+
+
+
+
+
+
+
+          <!-- <section class="row text-center placeholders">
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="https://avatars0.githubusercontent.com/u/24946995?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>Scott Cameron</h4>
+              <div class="text-muted">
+                <a href="https://thinkful-students.slack.com/messages/@scott_cam/" target="_blank"><i class="fa fa-slack"></i></a>
+                <a href="https://github.com/mscottcam" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="mailto:mscottcam@gmail.com"><i class="fa fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="https://avatars1.githubusercontent.com/u/26944658?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>Will McKelvey</h4>
+              <span class="text-muted">
+                <a href="https://thinkful-students.slack.com/messages/@wmac/" target="_blank"><i class="fa fa-slack"></i></a>
+                <a href="https://github.com/52lions06" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="mailto:mckelvey.william@yahoo.com"><i class="fa fa-envelope"></i></a>
+              </span>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="https://avatars1.githubusercontent.com/u/21695059?v=4&s=400" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>David Dinnison</h4>
+              <span class="text-muted">
+                <a href="https://thinkful-students.slack.com/messages/@daviddinnison/" target="_blank"><i class="fa fa-slack"></i></a>
+                <a href="https://github.com/daviddinnison" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="mailto:david.g.dinnison@gmail.com"><i class="fa fa-envelope"></i></a>
+              </span>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="https://avatars3.githubusercontent.com/u/16083866?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>Kristoffer Panahon</h4>
+              <span class="text-muted">
+                <a href="https://thinkful-students.slack.com/messages/@kristoffer/" target="_blank"><i class="fa fa-slack"></i></a>
+                <a href="https://github.com/krp312" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="mailto:krp312@me.com"><i class="fa fa-envelope"></i></a>
+              </span>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="https://avatars0.githubusercontent.com/u/22403806?v=4&s=400" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>Jonathan Haines</h4>
+              <span class="text-muted">
+                <a href="https://thinkful-students.slack.com/messages/@jonhaines/" target="_blank"><i class="fa fa-slack"></i></a>
+                <a href="https://github.com/joncancode" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="mailto:jc.haines19@gmail.com"><i class="fa fa-envelope"></i></a>
+              </span>
+            </div>                        
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="https://avatars2.githubusercontent.com/u/24369866?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>Evan Harris</h4>
+              <span class="text-muted">
+                <a href="https://thinkful-students.slack.com/messages/@echarris/" target="_blank"><i class="fa fa-slack"></i></a>
+                <a href="https://github.com/eharris128" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="mailto:echarris@smcm.edu"><i class="fa fa-envelope"></i></a>
+              </span>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="https://avatars0.githubusercontent.com/u/25437693?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>Lewi Gilamichael</h4>
+              <span class="text-muted">
+                <a href="https://thinkful-students.slack.com/messages/@lewi/" target="_blank"><i class="fa fa-slack"></i></a>
+                <a href="https://github.com/lewi-g" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="mailto:dr.lewi@gmail.com"><i class="fa fa-envelope"></i></a>
+              </span>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="https://avatars0.githubusercontent.com/u/26613820?v=4&s=400" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>Heidi Marsh</h4>
+              <span class="text-muted">
+                <a href="https://thinkful-students.slack.com/messages/@zwillerzoog/" target="_blank"><i class="fa fa-slack"></i></a>
+                <a href="https://github.com/zwillerzoog" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="mailto:marsh.heidi.c@gmail.com"><i class="fa fa-envelope"></i></a>
+              </span>
+            </div>  
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="https://avatars1.githubusercontent.com/u/8263203?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>Daniel Kato</h4>
+              <span class="text-muted">
+                <a href="https://thinkful-students.slack.com/messages/@danielkato/" target="_blank"><i class="fa fa-slack"></i></a>
+                <a href="https://github.com/dankato" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="mailto:apearmor@gmail.com"><i class="fa fa-envelope"></i></a>
+              </span>
+            </div>          
+          </section> -->
+
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>
