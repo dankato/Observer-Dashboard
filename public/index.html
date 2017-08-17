@@ -112,7 +112,63 @@
           </div>
 
    <!-- Post Dialog -->
-   <div id="dialog-modal" title="Create a new post">
+
+   <!-- <div class="modal fade" tabindex="-1" role="dialog"> -->
+    <div class="modal-dialog no-close" id="dialog-modal" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" title="Close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Create a new post</h4>
+        </div>
+        <div class="modal-body">
+        
+          <form id="dialog-form">
+            <fieldset>
+              <label for="header">Subject</label>
+              <input type="text" header="header" id="header" placeholder="Enter a quick note what this is about." class="text ui-widget-content ui-corner-all">
+              <label for="url">url</label>
+              <input type="text" header="url" id="url" placeholder="http://www.pandaexpress.com" class="text ui-widget-content ui-corner-all">
+              <label  for="week" >Week</label>
+                  <select id="week">
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                  </select>
+
+                  <label for="description">Description</label>
+                  <input type="description" header="description" id="description" placeholder="Describe in more detail of its importance." class="text ui-widget-content ui-corner-all">
+                  <button  type="submit" class="btn btn-primary">Submit</button>
+
+             
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+ 
+      </fieldset>
+    </form>
+
+        
+       </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    <!-- /.modal -->
+
+
+
+
+
+   <!-- <div id="dialog-modal" title="Create a new post">
     <p class="validateTips">All form fields are required and keep it under 200 characters.</p>
 
     <form id="dialog-form">
@@ -139,13 +195,13 @@
             </select>
         <label for="description">Description</label>
         <input type="description" header="description" id="description" placeholder="Describe in more detail of its importance." class="text ui-widget-content ui-corner-all">
-
+-->
         <!-- Allow form submission with keyboard without duplicating the dialog button -->
-        <button  tabindex="-1" >Submit</button>
+        <!-- <button  tabindex="-1" >Submit</button> -->
         <!-- style="position:absolute; top:-1000px" -->
-      </fieldset>
-    </form>
-  </div>
+      <!-- </fieldset> -->
+    <!-- </form> -->
+  <!-- </div> --> 
 
   <!-- Edit Dialog -->
   <div id="edit-dialog" title="Edit post">
@@ -177,7 +233,7 @@
         <input type="description" name="description" id="edit-description" value="" class="text ui-widget-content ui-corner-all">
 
         <!-- Allow form submission with keyboard without duplicating the dialog button -->
-        <button  tabindex="-1" >Submit</button>
+        <button>Submit</button>
         <!-- style="position:absolute; top:-1000px" -->
       </fieldset>
     </form>
@@ -276,12 +332,10 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <!-- <script src="../../../../assets/js/vendor/popper.min.js"></script> -->
+    <!-- <script src="../../../../dist/js/bootstrap.min.js"></script> -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

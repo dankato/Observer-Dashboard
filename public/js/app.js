@@ -37,7 +37,7 @@ let createPost = function(state) {
     description = $('#description').val();
   const addObj = {header: header, url: url, week: week, description: description};
 
-
+  console.log('--------->',header);
   $.ajax({
     url: '/api/posts/',
     dataType: 'json',
@@ -149,14 +149,8 @@ $( '#dialog-modal' ).dialog({
   height: 400,
   width: 350,
   modal: true,
-  buttons: {
-    // 'Submit':  createPost,
-    Cancel: function() {
-      $( '#dialog-modal' ).dialog( 'close' );
-    //   form[ 0 ].reset();
-    //   allFields.removeClass( 'ui-state-error' );
-    }
-  }
+  dialogClass: 'no-close',
+  
 });
 // @(help)
 // 1. Need form reset to function
@@ -169,17 +163,18 @@ $( '#edit-dialog' ).dialog({
   height: 400,
   width: 350,
   modal: true,
-  buttons: {
+  dialogClass: 'no-close',
+  // buttons: {
     // OK: function() {
     //   $( '#response' ).html( 'The value entered was ' + $( '#myInput' ).val());
     //   console.log(grabthisGuy);
     //   grabThisGuy.find( '#edit-header' ).html();
 
-    Cancel: function() {
-      $( '#response' ).html( 'The Cancel button was clicked' );
-      $( this ).dialog( 'close' );
-    }
-  }
+    // Close: function() {
+    //   $( '#response' ).html( 'The Cancel button was clicked' );
+    //   $( this ).dialog( 'close' );
+    // }
+  // }
 });
 
 //---event listeners----------------------------------------------------
