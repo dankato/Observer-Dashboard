@@ -7,7 +7,6 @@ App Live on
 ### TLTR
 A simple gui dashboard that students can view and contribute to by adding useful resources such as links posted in slack, or material shared by mentors.
 
-
 ### Installation
 |         |            | 
 | :------------- |:-------------| 
@@ -33,7 +32,7 @@ Solution: A central location for students to grab or share the necessities on th
 * Basic user authentication
 * Excellent code structure & quality
 
-### Nice to haves
+### To Build Next Features
 * Have the ability to add multiple links to one post
 * Oauth GitHub
 * Accessibility
@@ -53,6 +52,7 @@ Solution: A central location for students to grab or share the necessities on th
 * **The Front End**
 	* HTML/CSS
 	* Flexbox
+	* Bootstrap
 
 * **Tools**
 	* Postman for testing RESTful endpoints
@@ -73,23 +73,7 @@ Solution: A central location for students to grab or share the necessities on th
 * Edit post to change descriptions, updated URL
 * Delete posts with confirmation pop up
 
-### Views
-1. Create an Account (or login) page
-2. Login page (redirect users to this page after signing up on page 1 or clicking on log in on page 1)
-3. Dashboard page (Main page where user can CRUD)
-4. Create Post pop up dialog over page 3
-5. Edit Post pop up dialog over page 3
-6. Delete Post confirmation pop up dialog over page 3
-
-## Installation
-- Download/Clone the repo
-- Install dependencies: `npm install`
-- Start Mongo DB: `mongod`
-- Start server: `node server.js` or `nodemon server.js`
-- View in browser: `http://localhost:8080`
-- or use Heroku
-
-## Schedule
+### Schedule
 * :smirk: Monday (MVP)
 	- [x] Brainstorm ideas
 	- [x] Choose an app idea
@@ -102,7 +86,7 @@ Solution: A central location for students to grab or share the necessities on th
 
 * :confused: Tuesday (Skeleton & Unit Tests)
 	*  Version 1.2 contains
-	- [ ] working skeleton wk 7
+	- [x] working skeleton wk 7
 	- [x] get (functional)
 	- [x] post (functional)
 	- [x] delete (functional)
@@ -110,18 +94,15 @@ Solution: A central location for students to grab or share the necessities on th
 	- [x] Object seeding
 
 * :sweat: Wednesday (Muscle)
-	- [ ] Version 1.3 contains 	
-	- [ ] Unit Tests for CRUD
-	- [ ] Post Dialog print to HTML
+	*  Version 1.3 contains 	
+	- [x] Unit Tests for CRUD
+	- [x] Post Dialog print to HTML
 
 * :weary: Thursday (Demo Prep & App Complete)
-	- [ ] Version 1.3 contains
+	*  Version 1.3 contains
 	- [ ] auth create profile
 	- [ ] auth login flow
 
 * :bowtie: Friday (Polish & Demo Day)
-	- [ ] Version 1.4 contains
-	- [ ] Demo Deck
-
-### Wireframe / Spec
-https://goo.gl/iUP5ZW
+	*  Version 1.4 contains
+	- [x] Demo Deck

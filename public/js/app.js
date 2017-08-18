@@ -5,14 +5,15 @@
 var state = {
   users: [],
   posts: [],
+  // week: event.currentTarget.value
+  // week: function(event){$(event.currentTarget).value;}
 };
 
 //---state mods-----------------------------------------------
 
 function getPosts() {
   $.getJSON('/api/posts/', (json) => {
-    state.posts = json;
-    renderPosts(state, $('.tbody'));
+    renderPosts(json, $('.tbody'));
   });
 }
 
@@ -24,7 +25,7 @@ const createPost = function(state) {
     week = $('#week').val(),
     description = $('#description').val();
   const addObj = {header, url, week, description};
-
+  
   $.ajax({
     url: '/api/posts/',
     dataType: 'json',
@@ -32,9 +33,9 @@ const createPost = function(state) {
     contentType: 'application/json',
     data: JSON.stringify(addObj),
     success: function(data){
-      state.posts.push(data);
+      state.posts.unshift(data);
       $('#dialog-modal').dialog('close');
-      renderPosts(state, $('.tbody'));
+      renderPosts(data, $('.tbody'));
     }
   });
 };
@@ -44,10 +45,11 @@ let editPost = function(state, id) {
   let
     header = $('input#edit-header').val(),
     url = $('input#edit-url').val(),
-    week = $('input#edit-week').val(),
+    week = state.week,
     description = $('input#edit-description').val();
-  const addObj = {id: id, header: header, url: url, week: week, description: description};
-
+  const addObj = {id, header, url, week, description};
+  // console.log('selected id:', id);
+  console.log(addObj);
   $.ajax({
     url: '/api/posts/' + id,
     dataType: 'json',
@@ -55,7 +57,7 @@ let editPost = function(state, id) {
     contentType: 'application/json',
     data: JSON.stringify(addObj),
     success: function(data){
-      console.log('data: ', data);
+      // console.log('data: ', data);
       getPosts();
       $('#edit-dialog').dialog('close');
     }
@@ -79,7 +81,7 @@ let deletePost = function(state, mongoId) {
 
 //---template----------------------------------------------------
 
-function postTemplate(state, data){
+function postTemplate(data){
   return `
       <tr class="table-row" data-post-id="${data.id}">
         <td id="edit-header">${data.header}</td>
@@ -94,9 +96,10 @@ function postTemplate(state, data){
 
 //---render----------------------------------------------------
 
-function renderPosts(state, element) {
-  let postsHTML = state.posts.map(function(data) {
-    return postTemplate(state, data);
+function renderPosts(posts, element) {
+  // console.log(posts);
+  let postsHTML = posts.map(function(data) {
+    return postTemplate(data);
   });
   element.html(postsHTML);
 }
@@ -111,6 +114,11 @@ $('#dialog-modal').dialog({
   modal: true,
   dialogClass: 'no-close',
 });
+
+// $('#dialog-modal').modal({
+
+// });
+
 
 $('#edit-dialog').dialog({
   autoOpen: false,
@@ -161,12 +169,13 @@ const populateEditDialog = function(state, postId) {
 // Edit
 $('.tbody').on('click', '.edit-button', function() {
   const postId = $(event.target).closest('.table-row').data('post-id');
+  // console.log('-------->',postId);
   populateEditDialog(state, postId);
   $('#edit-dialog').dialog('open');
   $('#edit-form').on('submit', function (event) {
     event.preventDefault();
     editPost(state, postId);
-  } );
+  });
 });
 
 // Delete
@@ -184,5 +193,6 @@ $(function() {
     createPost(state);
   } );
   // dialog();
+  // console.log(state);
   getPosts();
 });

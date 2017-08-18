@@ -65,7 +65,9 @@ app.post('/api/posts/', (req, res) => {
       header: req.body.header,
       url: req.body.url,
       week: req.body.week,
-      description: req.body.description})
+      description: req.body.description,
+      createdAt: new Date()
+    })
     .then(
       post => res.status(201).json(post.apiRepr()))
     .catch(err => {

@@ -94,12 +94,15 @@
         </div>
 
         <!-- Post Dialog -->
-
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          Launch demo modal
+        </button>
         <!-- <div class="modal fade" tabindex="-1" role="dialog"> -->
-        <div class="modal-dialog no-close" id="dialog-modal">
+        <div class="modal-dialog no-close" aria-labelledby="exampleModalLabel" id="dialog-modal">
           <div class="modal-content">
             <div class="modal-header">
-              <!-- <button type="button" class="close" title="Close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+
+              <button type="button" class="close" title="Close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h4 class="modal-title">Create a new post</h4>
             </div>
             <div class="modal-body">
@@ -132,7 +135,7 @@
             </div>
             <div class="modal-footer">
               <button type="submit" class="btn btn-primary">Submit</button>
-              <!-- <button type="Close" class="Close">Cancel</button> -->
+              <button type="Close" class="Close">Cancel</button>
             </div>
             </fieldset>
             </form>
@@ -154,7 +157,7 @@
                   <label for="url">url</label>
                   <input type="text" name="url" id="edit-url" value="" class="text ui-widget-content ui-corner-all">
                   <label for="week">Week</label>
-                  <select name="week" id="edit-week">
+                  <select name="edit-week" id="edit-week">
                       <option value="07">07</option>
                       <option value="08">08</option>
                       <option value="09">09</option>
@@ -177,7 +180,7 @@
             </div>
           </div>
 
-          <!-- <section class="row text-center placeholders">
+    <!-- <section class="row text-center placeholders">
         <div class="col-6 col-sm-3 placeholder">
           <img src="https://avatars0.githubusercontent.com/u/24946995?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
           <h4>Scott Cameron</h4>
@@ -259,10 +262,10 @@
             <a href="mailto:apearmor@gmail.com"><i class="fa fa-envelope"></i></a>
           </span>
         </div>          
-      </section>
+    </section>
       </main>
       </div>
-    </div> -->
+      /div> -->
 
           <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>

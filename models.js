@@ -7,7 +7,7 @@ const postSchema = mongoose.Schema({
   url: {type: String, required: true},
   week: {type: Number, required: true},
   description: {type: String, required: true},
-
+  createdAt: Date
 });
 
 postSchema.methods.apiRepr = function() {
