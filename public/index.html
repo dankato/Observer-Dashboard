@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Observer Dashboard</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
-    
-    <!-- Custom styles for this template -->
-    <link href="../css/dashboard.css" rel="stylesheet">
-  </head>
+  <title>Observer Dashboard</title>
 
-  <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Observer Dashboard</a>
-      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+  <!-- Bootstrap core CSS -->
+  <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Observer Dashboard</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+      aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <button id="create-post" type="button" class="btn btn-outline-success my-2 my-sm-0">Create a new post</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Week <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item"><a href="#week-06" class="nav-link"> 06 Node Capstone</a></li>
+          <li class="nav-item"><a href="#week-07" class="nav-link"> 07 React</a></li>
+          <li class="nav-item"><a href="#week-08" class="nav-link"> 08 Redux</a></li>
+          <li class="nav-item"><a href="#week-09" class="nav-link"> 09 Full Stack</a></li>
+          <li class="nav-item"><a href="#week-10" class="nav-link"> 10 Design and Deploy</a></li>
+          <li class="nav-item"><a href="#week-11" class="nav-link"> 11 Data Structures I</a></li>
+          <li class="nav-item"><a href="#week-12" class="nav-link"> 12 Data Structures II</a></li>
+          <li class="nav-item"><a href="#week-13" class="nav-link"> 13 Spaced repetition</a></li>
+          <li class="nav-item"><a href="#week-14" class="nav-link"> 14 Flex Week</a></li>
+          <li class="nav-item"><a href="#week-15" class="nav-link"> 15 Capstone 1</a></li>
+          <li class="nav-item"><a href="#week-16" class="nav-link"> 16 Capstone 2</a></li>
+          <li class="nav-item"><a href="#week-17" class="nav-link"> 17 Capstone 3</a></li>
+          <li class="nav-item"><a href="#week-18" class="nav-link"> 18 Portfilio Week </a></li>
+          <li class="nav-item"><a href="#week-19" class="nav-link"> 19 Career Service</a></li>
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <button id="create-post" type="button" class="btn btn-outline-success my-2 my-sm-0" >Create a new post</button>
-        </form>
-      </div>
-    </nav>
+      </nav>
 
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
-          <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Week <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item"><a href="#week-06" class="nav-link"> 06 Node Capstone</a></li>
-            <li class="nav-item"><a href="#week-07" class="nav-link"> 07 React</a></li>
-            <li class="nav-item"><a href="#week-08" class="nav-link"> 08 Redux</a></li>
-            <li class="nav-item"><a href="#week-09" class="nav-link"> 09 Full Stack</a></li>
-            <li class="nav-item"><a href="#week-10" class="nav-link"> 10 Design and Deploy</a></li>
-            <li class="nav-item"><a href="#week-11" class="nav-link"> 11 Data Structures I</a></li>
-            <li class="nav-item"><a href="#week-12" class="nav-link"> 12 Data Structures II</a></li>
-            <li class="nav-item"><a href="#week-13" class="nav-link"> 13 Spaced repetition</a></li>
-            <li class="nav-item"><a href="#week-14" class="nav-link"> 14 Flex Week</a></li>
-            <li class="nav-item"><a href="#week-15" class="nav-link"> 15 Capstone 1</a></li>
-            <li class="nav-item"><a href="#week-16" class="nav-link"> 16 Capstone 2</a></li>
-            <li class="nav-item"><a href="#week-17" class="nav-link"> 17 Capstone 3</a></li>
-            <li class="nav-item"><a href="#week-18" class="nav-link"> 18 Portfilio Week </a></li>
-            <li class="nav-item"><a href="#week-19" class="nav-link"> 19 Career Service</a></li>
-          </ul>
-        </nav>
+      <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
 
-        <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
-
-          <!-- <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar-right">
+        <!-- <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar-right">
             <ul class="nav nav-pills flex-column">
               <li class="nav-item">
                 <a class="nav-link active" href="#">Students<span class="sr-only">(current)</span></a>
@@ -73,41 +75,41 @@
             </ul>
           </nav> -->
 
-              <div id="posts-contain" class= "table-responsive">
-                <table id="posts" class="table table-striped" >
-                  <thead class="thead">
-                <tr>
-                  <th>Subject</th>
-                  <th>URL</th>
-                  <th>Week</th>
-                  <th>Description</th>
-                  <th>Edit</th>
-                  <th>Remove</th>
-                </tr>
-              </thead>
-              <tbody class="tbody">
-    
-              </tbody>
-            </table>
-          </div>
+        <div id="posts-contain" class="table-responsive">
+          <table id="posts" class="table table-striped">
+            <thead class="thead">
+              <tr>
+                <th>Subject</th>
+                <th>URL</th>
+                <th>Week</th>
+                <th>Description</th>
+                <th>Edit</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody class="tbody">
 
-   <!-- Post Dialog -->
-
-   <!-- <div class="modal fade" tabindex="-1" role="dialog"> -->
-    <div class="modal-dialog no-close" id="dialog-modal" >
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" title="Close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Create a new post</h4>
+            </tbody>
+          </table>
         </div>
-        <div class="modal-body">
-          <form id="dialog-form">
-            <fieldset>
-              <label for="header">Subject</label>
-              <input type="text" header="header" id="header" placeholder="Enter a quick note what this is about." class="text ui-widget-content ui-corner-all">
-              <label for="url">url</label>
-              <input type="text" header="url" id="url" placeholder="http://www.pandaexpress.com" class="text ui-widget-content ui-corner-all">
-              <label  for="week" >Week</label>
+
+        <!-- Post Dialog -->
+
+        <!-- <div class="modal fade" tabindex="-1" role="dialog"> -->
+        <div class="modal-dialog no-close" id="dialog-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <!-- <button type="button" class="close" title="Close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+              <h4 class="modal-title">Create a new post</h4>
+            </div>
+            <div class="modal-body">
+              <form id="dialog-form">
+                <fieldset>
+                  <label for="header">Subject</label>
+                  <input type="text" header="header" id="header" placeholder="Enter a quick note what this is about." class="text ui-widget-content ui-corner-all">
+                  <label for="url">URL</label>
+                  <input type="text" header="url" id="url" placeholder="http://www.pandaexpress.com" class="text ui-widget-content ui-corner-all">
+                  <label for="week">Week</label>
                   <select id="week">
                       <option value="07">07</option>
                       <option value="08">08</option>
@@ -122,34 +124,36 @@
                       <option value="17">17</option>
                       <option value="18">18</option>
                       <option value="19">19</option>
-                  </select>
+                  </select></br>
                   <label for="description">Description</label>
-                  <input type="description" header="description" id="description" placeholder="Describe in more detail of its importance." class="text ui-widget-content ui-corner-all">
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Submit</button>
-          <button type="close" class="close">Cancel</button>
-        </div>
-        </fieldset>
-      </form>
-    </div>
-  </div>
 
-  <!-- Edit Dialog -->
-  <div class="modal-dialog no-close" id="edit-dialog" title="Edit post">
-    <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" title="Close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Create a new post</h4>
+                  <input type="description" header="description" id="description" placeholder="Describe in more detail of its importance."
+                    class="text ui-widget-content ui-corner-all">
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <!-- <button type="Close" class="Close">Cancel</button> -->
+            </div>
+            </fieldset>
+            </form>
+          </div>
         </div>
-        <div class="modal-body">
-           <form id="edit-form">
-              <fieldset>
-                <label for="header">Subject</label>
-                <input type="text" name="header" id="edit-header" value="" class="text ui-widget-content ui-corner-all">
-                <label for="url">url</label>
-                <input type="text" name="url" id="edit-url" value="" class="text ui-widget-content ui-corner-all">
-                <label  for="week" >Week</label>
+
+        <!-- Edit Dialog -->
+        <div class="modal-dialog no-close" id="edit-dialog" title="Edit post">
+          <div class="modal-content">
+            <div class="modal-header">
+              <!-- <button type="button" class="close" title="Close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+              <h4 class="modal-title">Create a new post</h4>
+            </div>
+            <div class="modal-body">
+              <form id="edit-form">
+                <fieldset>
+                  <label for="header">Subject</label>
+                  <input type="text" name="header" id="edit-header" value="" class="text ui-widget-content ui-corner-all">
+                  <label for="url">url</label>
+                  <input type="text" name="url" id="edit-url" value="" class="text ui-widget-content ui-corner-all">
+                  <label for="week">Week</label>
                   <select name="week" id="edit-week">
                       <option value="07">07</option>
                       <option value="08">08</option>
@@ -168,12 +172,12 @@
                   <label for="description">Description</label>
                   <input type="description" name="description" id="edit-description" value="" class="text ui-widget-content ui-corner-all">
                   <button>Submit</button>
-              </fieldset>
-            </form>
-    </div>
-  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
 
-    <section class="row text-center placeholders">
+          <!-- <section class="row text-center placeholders">
         <div class="col-6 col-sm-3 placeholder">
           <img src="https://avatars0.githubusercontent.com/u/24946995?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
           <h4>Scott Cameron</h4>
@@ -258,11 +262,12 @@
       </section>
       </main>
       </div>
-    </div>
+    </div> -->
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+          <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+          <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+          <script src="js/app.js"></script>
+</body>
+
 </html>
-

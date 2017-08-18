@@ -1,27 +1,16 @@
-/*
- * Base structure
- */
+/* Base structure */
 
-/* Move down content because we have a fixed navbar that is 3.5rem tall */
 body {
     padding-top: 3.5rem;
-  }
-  
-  /*
-   * Typography
-   */
-  
-  h1 {
+}
+
+h1 {
     margin-bottom: 20px;
     padding-bottom: 9px;
     border-bottom: 1px solid #eee;
-  }
-  
-  /*
-   * Sidebar
-   */
-  
-  .sidebar {
+}
+
+.sidebar {
     position: fixed;
     top: 51px;
     bottom: 0;
@@ -29,10 +18,12 @@ body {
     z-index: 1000;
     padding: 20px;
     overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
     border-right: 1px solid #eee;
-  }
-  .sidebar-right {
+}
+
+.sidebar-right {
     position: fixed;
     top: 51px;
     bottom: 0;
@@ -40,59 +31,74 @@ body {
     z-index: 1000;
     padding: 20px;
     overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
     border-right: 1px solid #eee;
-  }
-  /* Sidebar navigation */
-  .sidebar {
+}
+
+/* Sidebar navigation */
+
+.sidebar {
     padding-left: 0;
     padding-right: 0;
-  }
-  
-  .sidebar .nav {
+}
+
+.sidebar .nav {
     margin-bottom: 20px;
-  }
-  
-  .sidebar .nav-item {
+}
+
+.sidebar .nav-item {
     width: 100%;
-  }
-  
-  .sidebar .nav-item + .nav-item {
+}
+
+.sidebar .nav-item+.nav-item {
     margin-left: 0;
-  }
-  
-  .sidebar .nav-link {
+}
+
+.sidebar .nav-link {
     border-radius: 0;
-  }
-  
-  /*
-   * Dashboard
-   */
-  
-   /* Placeholders */
-  .placeholders {
-    padding-bottom: 3rem;
-  }
-  
-  .placeholder img {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
+}
 
+/* Dashboard */
 
-  /* label, input { display:block; width: auto; } */
-  .ui-button {align-items: right;}
-  /* .ui-dialog-titlebar {background-color: palevioletred;} */
-  /* div#edit-dialog, div#dialog-modal, .ui-dialog-buttonset {background-color: pink;} */
-  input.text { margin-bottom:12px; width:300px; height: 95%; padding: .4em; }
-  /* fieldset { padding:0; border:0; margin-top:25px; } */
-  h1 { font-size: 1.2em; margin: .6em 0; }
+.ui-button {
+    align-items: right;
+}
 
-  .no-close .ui-dialog-titlebar-close {
+input.text {
+    margin-bottom: 12px;
+    width: 300px;
+    height: 95%;
+    padding: .4em;
+}
+
+h1 {
+    font-size: 1.2em;
+    margin: .6em 0;
+}
+
+.no-close .ui-dialog-titlebar-close {
     display: none;
-  }
-  div#posts-contain { width: auto; margin: 20px 0; }
-  div#posts-contain table { margin: 1em 0; border-collapse: collapse; width: 100%;}
-  div#posts-contain table td, div#posts-contain table th {border: 1px solid #eee; padding: .6em 10px; text-align: left; }
-  .ui-dialog .ui-state-error { padding: .3em; }
-  /* .validateTips { border: 1px solid transparent; padding: 0.3em; } */
+}
+
+div#posts-contain {
+    width: auto;
+    margin: 20px 0;
+}
+
+div#posts-contain table {
+    margin: 1em 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+div#posts-contain table td,
+div#posts-contain table th {
+    border: 1px solid #eee;
+    padding: .6em 10px;
+    text-align: left;
+}
+
+.ui-dialog .ui-state-error {
+    padding: .3em;
+}
