@@ -1,7 +1,4 @@
 node_modules
 .env
-need.node_modules
-wireframe.png
-boot
+1
 .travis.yml
-need.md

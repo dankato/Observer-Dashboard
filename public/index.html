@@ -1,12 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- <link rel="icon" href="../../../../favicon.ico"> -->
 
     <title>Observer Dashboard</title>
 
@@ -27,22 +23,8 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <!-- <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Settings</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Profile</a>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Help</a>
-          </li> -->
         </ul>
         <form class="form-inline mt-2 mt-md-0">
-          <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
           <button id="create-post" type="button" class="btn btn-outline-success my-2 my-sm-0" >Create a new post</button>
         </form>
       </div>
@@ -91,7 +73,6 @@
             </ul>
           </nav> -->
 
-       
               <div id="posts-contain" class= "table-responsive">
                 <table id="posts" class="table table-striped" >
                   <thead class="thead">
@@ -106,7 +87,6 @@
               </thead>
               <tbody class="tbody">
     
-
               </tbody>
             </table>
           </div>
@@ -121,7 +101,6 @@
           <h4 class="modal-title">Create a new post</h4>
         </div>
         <div class="modal-body">
-        
           <form id="dialog-form">
             <fieldset>
               <label for="header">Subject</label>
@@ -144,204 +123,146 @@
                       <option value="18">18</option>
                       <option value="19">19</option>
                   </select>
-
                   <label for="description">Description</label>
                   <input type="description" header="description" id="description" placeholder="Describe in more detail of its importance." class="text ui-widget-content ui-corner-all">
-                  <button  type="submit" class="btn btn-primary">Submit</button>
-
-             
         </div>
         <div class="modal-footer">
-          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
           <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="close" class="close">Cancel</button>
         </div>
- 
-      </fieldset>
-    </form>
-
-        
-       </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    <!-- /.modal -->
-
-
-
-
-
-   <!-- <div id="dialog-modal" title="Create a new post">
-    <p class="validateTips">All form fields are required and keep it under 200 characters.</p>
-
-    <form id="dialog-form">
-      <fieldset>
-        <label for="header">Subject</label>
-        <input type="text" header="header" id="header" placeholder="Enter a quick note what this is about." class="text ui-widget-content ui-corner-all">
-        <label for="url">url</label>
-        <input type="text" header="url" id="url" placeholder="http://www.pandaexpress.com" class="text ui-widget-content ui-corner-all">
-        <label  for="week" >Week</label>
-            <select id="week">
-                <option value="07">07</option>
-                <option value="08">08</option>
-                <option value="09">09</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-            </select>
-        <label for="description">Description</label>
-        <input type="description" header="description" id="description" placeholder="Describe in more detail of its importance." class="text ui-widget-content ui-corner-all">
--->
-        <!-- Allow form submission with keyboard without duplicating the dialog button -->
-        <!-- <button  tabindex="-1" >Submit</button> -->
-        <!-- style="position:absolute; top:-1000px" -->
-      <!-- </fieldset> -->
-    <!-- </form> -->
-  <!-- </div> --> 
-
-  <!-- Edit Dialog -->
-  <div id="edit-dialog" title="Edit post">
-    <p class="validateTips">All form fields are required and keep it under 200 characters.</p>
-
-    <form id="edit-form">
-      <fieldset>
-        <label for="header">Subject</label>
-        <input type="text" name="header" id="edit-header" value="" class="text ui-widget-content ui-corner-all">
-        <label for="url">url</label>
-        <input type="text" name="url" id="edit-url" value="" class="text ui-widget-content ui-corner-all">
-        <label  for="week" >Week</label>
-            <select name="week" id="edit-week">
-                <option value="07">07</option>
-                <option value="08">08</option>
-                <option value="09">09</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-            </select>
-        <label for="description">Description</label>
-        <input type="description" name="description" id="edit-description" value="" class="text ui-widget-content ui-corner-all">
-
-        <!-- Allow form submission with keyboard without duplicating the dialog button -->
-        <button>Submit</button>
-        <!-- style="position:absolute; top:-1000px" -->
-      </fieldset>
-    </form>
+        </fieldset>
+      </form>
+    </div>
   </div>
 
+  <!-- Edit Dialog -->
+  <div class="modal-dialog no-close" id="edit-dialog" title="Edit post">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" title="Close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Create a new post</h4>
+        </div>
+        <div class="modal-body">
+           <form id="edit-form">
+              <fieldset>
+                <label for="header">Subject</label>
+                <input type="text" name="header" id="edit-header" value="" class="text ui-widget-content ui-corner-all">
+                <label for="url">url</label>
+                <input type="text" name="url" id="edit-url" value="" class="text ui-widget-content ui-corner-all">
+                <label  for="week" >Week</label>
+                  <select name="week" id="edit-week">
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                  </select>
+                  <label for="description">Description</label>
+                  <input type="description" name="description" id="edit-description" value="" class="text ui-widget-content ui-corner-all">
+                  <button>Submit</button>
+              </fieldset>
+            </form>
+    </div>
+  </div>
 
-
-          <!-- <section class="row text-center placeholders">
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="https://avatars0.githubusercontent.com/u/24946995?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Scott Cameron</h4>
-              <div class="text-muted">
-                <a href="https://thinkful-students.slack.com/messages/@scott_cam/" target="_blank"><i class="fa fa-slack"></i></a>
-                <a href="https://github.com/mscottcam" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="mailto:mscottcam@gmail.com"><i class="fa fa-envelope"></i></a>
-              </div>
-            </div>
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="https://avatars1.githubusercontent.com/u/26944658?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Will McKelvey</h4>
-              <span class="text-muted">
-                <a href="https://thinkful-students.slack.com/messages/@wmac/" target="_blank"><i class="fa fa-slack"></i></a>
-                <a href="https://github.com/52lions06" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="mailto:mckelvey.william@yahoo.com"><i class="fa fa-envelope"></i></a>
-              </span>
-            </div>
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="https://avatars1.githubusercontent.com/u/21695059?v=4&s=400" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>David Dinnison</h4>
-              <span class="text-muted">
-                <a href="https://thinkful-students.slack.com/messages/@daviddinnison/" target="_blank"><i class="fa fa-slack"></i></a>
-                <a href="https://github.com/daviddinnison" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="mailto:david.g.dinnison@gmail.com"><i class="fa fa-envelope"></i></a>
-              </span>
-            </div>
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="https://avatars3.githubusercontent.com/u/16083866?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Kristoffer Panahon</h4>
-              <span class="text-muted">
-                <a href="https://thinkful-students.slack.com/messages/@kristoffer/" target="_blank"><i class="fa fa-slack"></i></a>
-                <a href="https://github.com/krp312" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="mailto:krp312@me.com"><i class="fa fa-envelope"></i></a>
-              </span>
-            </div>
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="https://avatars0.githubusercontent.com/u/22403806?v=4&s=400" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Jonathan Haines</h4>
-              <span class="text-muted">
-                <a href="https://thinkful-students.slack.com/messages/@jonhaines/" target="_blank"><i class="fa fa-slack"></i></a>
-                <a href="https://github.com/joncancode" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="mailto:jc.haines19@gmail.com"><i class="fa fa-envelope"></i></a>
-              </span>
-            </div>                        
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="https://avatars2.githubusercontent.com/u/24369866?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Evan Harris</h4>
-              <span class="text-muted">
-                <a href="https://thinkful-students.slack.com/messages/@echarris/" target="_blank"><i class="fa fa-slack"></i></a>
-                <a href="https://github.com/eharris128" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="mailto:echarris@smcm.edu"><i class="fa fa-envelope"></i></a>
-              </span>
-            </div>
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="https://avatars0.githubusercontent.com/u/25437693?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Lewi Gilamichael</h4>
-              <span class="text-muted">
-                <a href="https://thinkful-students.slack.com/messages/@lewi/" target="_blank"><i class="fa fa-slack"></i></a>
-                <a href="https://github.com/lewi-g" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="mailto:dr.lewi@gmail.com"><i class="fa fa-envelope"></i></a>
-              </span>
-            </div>
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="https://avatars0.githubusercontent.com/u/26613820?v=4&s=400" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Heidi Marsh</h4>
-              <span class="text-muted">
-                <a href="https://thinkful-students.slack.com/messages/@zwillerzoog/" target="_blank"><i class="fa fa-slack"></i></a>
-                <a href="https://github.com/zwillerzoog" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="mailto:marsh.heidi.c@gmail.com"><i class="fa fa-envelope"></i></a>
-              </span>
-            </div>  
-            <div class="col-6 col-sm-3 placeholder">
-              <img src="https://avatars1.githubusercontent.com/u/8263203?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Daniel Kato</h4>
-              <span class="text-muted">
-                <a href="https://thinkful-students.slack.com/messages/@danielkato/" target="_blank"><i class="fa fa-slack"></i></a>
-                <a href="https://github.com/dankato" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="mailto:apearmor@gmail.com"><i class="fa fa-envelope"></i></a>
-              </span>
-            </div>          
-          </section> -->
-
-        </main>
+    <section class="row text-center placeholders">
+        <div class="col-6 col-sm-3 placeholder">
+          <img src="https://avatars0.githubusercontent.com/u/24946995?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+          <h4>Scott Cameron</h4>
+          <div class="text-muted">
+            <a href="https://thinkful-students.slack.com/messages/@scott_cam/" target="_blank"><i class="fa fa-slack"></i></a>
+            <a href="https://github.com/mscottcam" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:mscottcam@gmail.com"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-sm-3 placeholder">
+          <img src="https://avatars1.githubusercontent.com/u/26944658?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+          <h4>Will McKelvey</h4>
+          <span class="text-muted">
+            <a href="https://thinkful-students.slack.com/messages/@wmac/" target="_blank"><i class="fa fa-slack"></i></a>
+            <a href="https://github.com/52lions06" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:mckelvey.william@yahoo.com"><i class="fa fa-envelope"></i></a>
+          </span>
+        </div>
+        <div class="col-6 col-sm-3 placeholder">
+          <img src="https://avatars1.githubusercontent.com/u/21695059?v=4&s=400" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+          <h4>David Dinnison</h4>
+          <span class="text-muted">
+            <a href="https://thinkful-students.slack.com/messages/@daviddinnison/" target="_blank"><i class="fa fa-slack"></i></a>
+            <a href="https://github.com/daviddinnison" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:david.g.dinnison@gmail.com"><i class="fa fa-envelope"></i></a>
+          </span>
+        </div>
+        <div class="col-6 col-sm-3 placeholder">
+          <img src="https://avatars3.githubusercontent.com/u/16083866?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+          <h4>Kristoffer Panahon</h4>
+          <span class="text-muted">
+            <a href="https://thinkful-students.slack.com/messages/@kristoffer/" target="_blank"><i class="fa fa-slack"></i></a>
+            <a href="https://github.com/krp312" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:krp312@me.com"><i class="fa fa-envelope"></i></a>
+          </span>
+        </div>
+        <div class="col-6 col-sm-3 placeholder">
+          <img src="https://avatars0.githubusercontent.com/u/22403806?v=4&s=400" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+          <h4>Jonathan Haines</h4>
+          <span class="text-muted">
+            <a href="https://thinkful-students.slack.com/messages/@jonhaines/" target="_blank"><i class="fa fa-slack"></i></a>
+            <a href="https://github.com/joncancode" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:jc.haines19@gmail.com"><i class="fa fa-envelope"></i></a>
+          </span>
+        </div>                        
+        <div class="col-6 col-sm-3 placeholder">
+          <img src="https://avatars2.githubusercontent.com/u/24369866?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+          <h4>Evan Harris</h4>
+          <span class="text-muted">
+            <a href="https://thinkful-students.slack.com/messages/@echarris/" target="_blank"><i class="fa fa-slack"></i></a>
+            <a href="https://github.com/eharris128" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:echarris@smcm.edu"><i class="fa fa-envelope"></i></a>
+          </span>
+        </div>
+        <div class="col-6 col-sm-3 placeholder">
+          <img src="https://avatars0.githubusercontent.com/u/25437693?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+          <h4>Lewi Gilamichael</h4>
+          <span class="text-muted">
+            <a href="https://thinkful-students.slack.com/messages/@lewi/" target="_blank"><i class="fa fa-slack"></i></a>
+            <a href="https://github.com/lewi-g" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:dr.lewi@gmail.com"><i class="fa fa-envelope"></i></a>
+          </span>
+        </div>
+        <div class="col-6 col-sm-3 placeholder">
+          <img src="https://avatars0.githubusercontent.com/u/26613820?v=4&s=400" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+          <h4>Heidi Marsh</h4>
+          <span class="text-muted">
+            <a href="https://thinkful-students.slack.com/messages/@zwillerzoog/" target="_blank"><i class="fa fa-slack"></i></a>
+            <a href="https://github.com/zwillerzoog" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:marsh.heidi.c@gmail.com"><i class="fa fa-envelope"></i></a>
+          </span>
+        </div>  
+        <div class="col-6 col-sm-3 placeholder">
+          <img src="https://avatars1.githubusercontent.com/u/8263203?v=4&s=460" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+          <h4>Daniel Kato</h4>
+          <span class="text-muted">
+            <a href="https://thinkful-students.slack.com/messages/@danielkato/" target="_blank"><i class="fa fa-slack"></i></a>
+            <a href="https://github.com/dankato" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:apearmor@gmail.com"><i class="fa fa-envelope"></i></a>
+          </span>
+        </div>          
+      </section>
+      </main>
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- <script src="../../../../assets/js/vendor/popper.min.js"></script> -->
-    <!-- <script src="../../../../dist/js/bootstrap.min.js"></script> -->
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!-- <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/app.js"></script>
-
   </body>
 </html>
+
