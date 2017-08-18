@@ -13,7 +13,8 @@ var state = {
 
 function getPosts() {
   $.getJSON('/api/posts/', (json) => {
-    renderPosts(json, $('.tbody'));
+    state.posts = json;
+    renderPosts(state, $('.tbody'));
   });
 }
 
@@ -33,9 +34,9 @@ const createPost = function(state) {
     contentType: 'application/json',
     data: JSON.stringify(addObj),
     success: function(data){
-      state.posts.unshift(data);
+      state.posts.push(data);
       $('#dialog-modal').dialog('close');
-      renderPosts(data, $('.tbody'));
+      renderPosts(state, $('.tbody'));
     }
   });
 };
@@ -96,9 +97,9 @@ function postTemplate(data){
 
 //---render----------------------------------------------------
 
-function renderPosts(posts, element) {
+function renderPosts(state, element) {
   // console.log(posts);
-  let postsHTML = posts.map(function(data) {
+  let postsHTML = state.posts.map(function(data) {
     return postTemplate(data);
   });
   element.html(postsHTML);
@@ -172,7 +173,7 @@ $('.tbody').on('click', '.edit-button', function() {
   // console.log('-------->',postId);
   populateEditDialog(state, postId);
   $('#edit-dialog').dialog('open');
-  $('#edit-form').on('submit', function (event) {
+  $('#edit-form').unbind().on('submit', function (event) {
     event.preventDefault();
     editPost(state, postId);
   });

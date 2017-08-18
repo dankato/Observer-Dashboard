@@ -94,15 +94,12 @@
         </div>
 
         <!-- Post Dialog -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-          Launch demo modal
-        </button>
         <!-- <div class="modal fade" tabindex="-1" role="dialog"> -->
         <div class="modal-dialog no-close" aria-labelledby="exampleModalLabel" id="dialog-modal">
           <div class="modal-content">
             <div class="modal-header">
 
-              <button type="button" class="close" title="Close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <!-- <button type="button" class="close btn btn-primary" title="Close" data-dismiss="#dialog-modal" data-toggle="modal" data-target="#dialog-modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
               <h4 class="modal-title">Create a new post</h4>
             </div>
             <div class="modal-body">
@@ -135,7 +132,7 @@
             </div>
             <div class="modal-footer">
               <button type="submit" class="btn btn-primary">Submit</button>
-              <button type="Close" class="Close">Cancel</button>
+              <button type="button" class="Close" data-target="#dialog-modal">Cancel</button>
             </div>
             </fieldset>
             </form>
