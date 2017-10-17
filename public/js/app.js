@@ -35,10 +35,14 @@ const createPost = function(state) {
     data: JSON.stringify(addObj),
     success: function(data){
       state.posts.push(data);
-      $('#dialog-modal').dialog('close');
+
       renderPosts(state, $('.tbody'));
+      $('#dialog-modal').dialog('close');
+      document.getElementById('dialog-form').reset();
     }
+    
   });
+
 };
 
 // Edit Post
@@ -63,6 +67,7 @@ let editPost = function(state, id) {
       $('#edit-dialog').dialog('close');
     }
   });
+
 };
 
 
@@ -113,7 +118,13 @@ $('#dialog-modal').dialog({
   height: 400,
   width: 350,
   modal: true,
-  dialogClass: 'no-close',
+  // dialogClass: 'no-close',
+  buttons: {
+    Cancel: function() {
+      $('.Close').dialog( 'Close' );
+    }
+  }
+
 });
 
 // $('#dialog-modal').modal({
@@ -128,16 +139,7 @@ $('#edit-dialog').dialog({
   modal: true,
   dialogClass: 'no-close',
   // optional for jquery ui button usage
-  // buttons: {
-    // OK: function() {
-    //   $( '#response' ).html( 'The value entered was ' + $( '#myInput' ).val());
-    //   grabThisGuy.find( '#edit-header' ).html();
 
-    // Close: function() {
-    //   $( '#response' ).html( 'The Cancel button was clicked' );
-    //   $( this ).dialog( 'close' );
-    // }
-  // }
 });
 
 //---event listeners----------------------------------------------------

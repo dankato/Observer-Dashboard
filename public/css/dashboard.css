@@ -102,3 +102,17 @@ div#posts-contain table th {
 .ui-dialog .ui-state-error {
     padding: .3em;
 }
+#ui-id-2, .ui-dialog-title {
+    display: none;
+  }
+
+.ui-dialog-titlebar {
+    display: flex;
+}
+
+.ui-dialog-titlebar-close {
+    margin-bottom: -28px;
+    margin-left: 275px;
+    align-items: flex-end;
+    background-color: lightcoral;
+}
