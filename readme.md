@@ -2,7 +2,7 @@
 ---
 
 App Live on
-[Heroku](https://tranquil-plateau-10397.herokuapp.com/)
+[Heroku](https://observer-dashboard.herokuapp.com/)
 
 ### TLTR
 A simple gui dashboard that students can view and contribute to by adding useful resources such as links posted in slack, or material shared by mentors.
@@ -12,6 +12,7 @@ A simple gui dashboard that students can view and contribute to by adding useful
 | :------------- |:-------------| 
 | Download/Clone the repo | https://github.com/dankato/Observer-Dashboard.git |
 | Install dependencies | `npm install`| 
+| Setup a mlab db | add DATABASE_URL to Heroku's Config Vars| 
 | Start Mongo DB | `mongod` | 
 | Start server | `node server.js` or `nodemon server.js` | 
 | View in browser | `http://localhost:8080` |
