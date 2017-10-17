@@ -1,5 +1,4 @@
 ## Observer Dashboard
----
 
 App Live on
 [Heroku](https://observer-dashboard.herokuapp.com/)
