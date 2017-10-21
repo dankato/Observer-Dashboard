@@ -3,7 +3,7 @@
 App Live on
 [Heroku](https://observer-dashboard.herokuapp.com/)
 
-### TLTR
+### TL;DR
 A simple gui dashboard that students can view and contribute to by adding useful resources such as links posted in slack, or material shared by mentors.
 
 ### Installation
