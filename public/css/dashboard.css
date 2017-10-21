@@ -116,3 +116,7 @@ div#posts-contain table th {
     align-items: flex-end;
     background-color: lightcoral;
 }
+
+.navbar-toggler {
+    display: none;
+}
